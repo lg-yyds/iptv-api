@@ -6,3 +6,4 @@ http://php.jdshipin.com/TVOD/
 https://www.freetv.top/migu/
 http://z.b.bkpcp.top/
 https://live.hkdvb.com/hls/live/
+http://tv.lihonest.xyz:3000/AKTV/live/aktv3/
