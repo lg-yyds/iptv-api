@@ -6,6 +6,7 @@ https://raw.githubusercontent.com/dextermo01/HH004015/45fe84621104dca2fbe687665e
 https://raw.githubusercontent.com/umaru0660/umaru0660.github.io/b9d41eaaaba7312b8b37aecb03076ce466b265cd/hklive.m3u
 https://raw.githubusercontent.com/dextermo01/HH004015/45fe84621104dca2fbe687665e609973de1b8bb3/HK-zh.m3u
 https://raw.githubusercontent.com/lbxxxtw2/tv/fb5ddb36072801c34f89943c7cfeaa535e665b9b/hkdvb.m3u
+https://raw.githubusercontent.com/lihonest/daily/a0fc6ec94f5cbce57871f7d3e622bbbb24a17877/diyp.txt
 https://live.iptv365.org/live.txt
 https://raw.githubusercontent.com/tansuotv/IPTVindex/refs/heads/main/tv.txt
 https://raw.githubusercontent.com/iptv-org/iptv/gh-pages/countries/cn.m3u
