@@ -51,45 +51,6 @@ HOY TV
 龙华经典
 澳视澳门
 澳视卫星
-Jade 翡翠台
-Jade 翡翠台(h265)
-TVB PLUS
-News 新聞台
-News 新聞台(h265)
-Pearl 明珠台
-鳳凰香港台
-Classic 千禧經典台
-華語劇台
-黃金華劇台
-黃金翡翠台
-粵語片台
-美亞電影台
-Popc
-翡翠4K
-HOY TV
-HOY TV 資訊台
-HOY 國際財經台
-ViuTV
-ViuTV Six
-HBO
-Now Popcorn 爆谷台
-Now Superstars 星影台
-Now NEWS 新聞台
-Now Sports 英超1台
-Now Sports Prime
-Now Sports 632
-Now Sports 641
-Now Sports 642
-港台電視 31
-港台電視 32
-CCTV-1  港澳版
-CGTN Documentary
-CGTN English
-CCM
-CM
-珠江
-广东体育
-SuperSport LaLiga
 Pearl 明珠台
 HOYTV资讯台
 NOW新闻台
