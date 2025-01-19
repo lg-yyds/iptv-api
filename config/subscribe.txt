@@ -4,7 +4,6 @@
 https://raw.githubusercontent.com/dextermo01/HH004015/45fe84621104dca2fbe687665e609973de1b8bb3/HK.m3u
 https://raw.githubusercontent.com/dextermo01/HH004015/45fe84621104dca2fbe687665e609973de1b8bb3/Archive.m3u
 https://raw.githubusercontent.com/dextermo01/HH004015/45fe84621104dca2fbe687665e609973de1b8bb3/HK-zh.m3u
-https://raw.githubusercontent.com/lbxxxtw2/tv/fb5ddb36072801c34f89943c7cfeaa535e665b9b/hkdvb.m3u
 https://live.iptv365.org/live.txt
 https://raw.githubusercontent.com/tansuotv/IPTVindex/refs/heads/main/tv.txt
 https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.txt
