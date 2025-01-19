@@ -1,10 +1,9 @@
 name: Build 和 Push Docker Images
 
 on:
-  push: # push 到主分支自动发布
-    branches: ["master"]
-  pull_request:
-    branches: ["master"]
+  workflow_dispatch:
+    branches:
+      - master
 
 jobs:
   build:
