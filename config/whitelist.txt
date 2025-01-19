@@ -3,6 +3,7 @@
 # This is the whitelist of the interface or subscription source. The interface in the whitelist or the interface obtained by the subscription source will not participate in the speed measurement and will be prioritized in the result.
 # Filling in the channel name will directly retain the record to the final result, such as: CCTV-1,url, only fill in the interface address will be effective for all channels, multiple records newline input.
 http://php.jdshipin.com/TVOD/
+http://aktv.top/AKTV/live/aktv/
 https://www.freetv.top/migu/
 http://z.b.bkpcp.top/
 https://live.hkdvb.com/hls/live/
