@@ -254,7 +254,7 @@ docker run -d -p 8000:8000 guovern/iptv-api:lite
 - iptv-api：
 
 ```bash
-docker run -v /etc/docker/config:/iptv-api/config -v /etc/docker/output:/iptv-api/output -d -p 8000:8000 guovern/iptv-api
+docker run -v /root/iptv-api/config:/iptv-api/config -v /root/iptv-api/output:/iptv-api/output -d -p 8009:8000 yydsxll/iptv-api
 ```
 
 - iptv-api:lite：
