@@ -4,7 +4,6 @@
 # Filling in the channel name will directly retain the record to the final result, such as: CCTV-1,url, only fill in the interface address will be effective for all channels, multiple records newline input.
 http://php.jdshipin.com/TVOD/
 http://aktv.top/AKTV/live/aktv/
-http://z.b.bkpcp.top/
 https://www.freetv.top/migu/
-https://live.hkdvb.com/hls/live/
+http://z.b.bkpcp.top/
 http://tv.lihonest.xyz:3000/AKTV/live/aktv3/
