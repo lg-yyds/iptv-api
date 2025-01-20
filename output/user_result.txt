@@ -775,13 +775,6 @@ CCTV-17,http://117.144.58.42:35455/gaoma/cctv17.m3u8
 CCTV-17,http://wab201.win:35455/gaoma/cctv17.m3u8
 CCTV-17,http://3.itv.nctv.top:35455/gaoma/cctv17.m3u8
 
-💰央视付费频道,#genre#
-央视台球,http://livetv.wqwqwq.sbs/rptv/G_TAIQIU-CQ.m3u8?license=gitv
-风云足球,http://livetv.wqwqwq.sbs/rptv/G_FENGSHANGZQ-CQ.m3u8?license=gitv
-风云足球,http://113.57.111.4:1111/tsfile/live/1033_1.m3u8
-风云足球,http://183.11.239.36:808/hls/133/index.m3u8
-世界地理,http://livetv.wqwqwq.sbs/rptv/G_SHIJIEDL-CQ.m3u8?license=gitv
-
 📡卫视频道,#genre#
 广东卫视,http://hg.130707.xyz/5000000004000014694/bestzb/index.m3u8
 广东卫视,http://hg.130707.xyz/6000000001000031076/wasusyt/index.m3u8
