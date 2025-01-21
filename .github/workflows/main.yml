@@ -2,7 +2,8 @@ name: 'Update schedule'
 
 on:
   schedule:
-    - cron: '0 11 * * *'
+    - cron: '0 06 * * *'
+    - cron: '0 17 * * *'
   workflow_dispatch:
     branches:
       - master
