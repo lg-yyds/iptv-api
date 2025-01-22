@@ -18,6 +18,7 @@ CCTV-12
 CCTV-13
 CCTV-14
 CCTV-15
+CCTV-16
 CCTV-17
 广东卫视
 湖北卫视
@@ -131,8 +132,8 @@ CCTV-12
 CCTV-13
 CCTV-14
 CCTV-15
-CCTV-17
 CCTV-16
+CCTV-17
 CETV1
 CETV2
 CETV4
@@ -1560,7 +1561,7 @@ CN卡通
 上海滩
 射雕英雄传
 
-📺CGTN频道#genre#
+📺CGTN频道,#genre#
 CGTN
 CGTN阿拉伯语
 CGTN俄语
