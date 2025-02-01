@@ -6,4 +6,3 @@ https://arm.130707.xyz/Sub?type=txt
 https://www.freetv.top/migu.m3u
 http://php.jdshipin.com/TVOD/
 http://tv.lihonest.xyz:3000/AKTV/live/aktv3/
-http://aktv.top/AKTV/live/aktv/
