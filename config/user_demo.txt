@@ -168,6 +168,147 @@ CETV5
 西藏卫视
 新疆卫视
 云南卫视
+🌊港·澳·台,#genre#
+翡翠台
+明珠台
+凤凰中文
+凤凰资讯
+凤凰香港
+凤凰卫视
+TVBS亚洲
+香港卫视
+纬来体育
+纬来育乐
+J2
+Viutv
+三立台湾
+无线新闻
+三立新闻
+民視第一台
+民視台灣台
+民視
+大愛電視
+中視
+中視經典台
+華視
+三立綜合台
+客家電視台
+八大綜藝台
+中視菁采台
+TVBS精采台
+愛爾達娛樂台
+靖天綜合台
+靖天日本台
+新唐人亞太台
+ARIRANG阿里郎頻道
+Global Trekker
+原住民族電視台
+東森購物四台
+LiveABC互動英語頻道
+達文西頻道
+ELTV生活英語台
+Nick Jr. 兒童頻道
+尼克兒童頻道
+DreamWorks 夢工廠動畫
+靖天卡通台
+靖洋卡通Nice Bingo
+MOMO親子台
+東森購物一台
+鏡電視新聞台
+東森新聞台
+華視新聞
+民視新聞台
+三立新聞iNEWS
+TVBS新聞
+東森財經新聞台
+中視新聞
+中天新聞台
+Bloomberg TV
+寰宇新聞台
+寰宇新聞台灣台
+SBN全球財經台
+寰宇財經台
+TVBS
+東森購物二台
+民視綜藝台
+豬哥亮歌廳秀
+靖天育樂台
+KLT-靖天國際台
+Nice TV 靖天歡樂台
+靖天資訊台
+TVBS歡樂台
+韓國娛樂台 KMTV
+ROCK Entertainment
+Lifetime 娛樂頻道
+電影原聲台CMusic
+TRACE Urban
+MTV Live HD 音樂頻道
+Mezzo Live HD
+CLASSICA 古典樂
+東森購物三台
+TRACE Sport Stars
+智林體育台
+時尚運動X
+車迷TV
+GINX Esports TV
+Pet Club TV
+民視旅遊台
+滾動力rollor
+亞洲旅遊台
+fun探索娛樂台
+幸福空間居家台
+Love Nature
+History 歷史頻道
+愛爾達生活旅遊台
+LUXE TV Channel
+TV5MONDE STYLE HD 生活時尚
+公視戲劇
+民視影劇台
+HITS頻道
+八大精彩台
+霹靂布袋戲
+靖天戲劇台
+靖洋戲劇台
+CI 罪案偵查頻道
+視納華仁紀實頻道
+影迷數位紀實台
+金光布袋戲
+ROCK Action
+采昌影劇台
+靖天映畫
+靖天電影台
+影迷數位電影台
+amc電影台
+CinemaWorld
+My Cinema Europe HD 我的歐洲電影
+好消息
+好消息2台
+大愛二台
+人間衛視
+FRANCE24 英文台
+半島國際新聞台
+VOA美國之音
+CNBC Asia 財經台
+DW德國之聲
+鳳梨直擊台
+香蕉直擊台
+芭樂直擊台
+國會頻道1
+國會頻道2
+TVBS綜藝台
+TVBS台劇台
+經典電影台
+經典卡通台
+精選動漫台
+戲劇免費看 1台
+东森综合
+东森超视
+东森电影
+Now剧集
+Now华剧
+靖天资讯
+星卫娱乐
+卫视卡式
 ☘️广东频道,#genre#
 广东新闻
 广东民生
@@ -1384,30 +1525,7 @@ BTV纪实
 齐齐哈尔经济法制
 双鸭山综合
 七台河民生社教
-🌊港·澳·台,#genre#
-翡翠台
-明珠台
-凤凰中文
-凤凰资讯
-凤凰香港
-凤凰卫视
-TVBS亚洲
-香港卫视
-纬来体育
-纬来育乐
-J2
-Viutv
-三立台湾
-无线新闻
-三立新闻
-东森综合
-东森超视
-东森电影
-Now剧集
-Now华剧
-靖天资讯
-星卫娱乐
-卫视卡式
+
 🎬电影频道,#genre#
 CHC家庭影院
 CHC动作电影
