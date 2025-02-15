@@ -1,0 +1,43 @@
+name: Update user_result.txt
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # 每天午夜 UTC 运行
+  workflow_dispatch:  # 允许手动运行
+
+jobs:
+  update-file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Modify user_result.txt
+        run: |
+          # 指定文件路径
+          INPUT_FILE="output/user_result.txt"
+          OUTPUT_FILE="output/user_tv.txt"
+          TEMP_FILE="temp_content.txt"
+          
+          # 确保 output 目录存在
+          mkdir -p output
+          
+          # 下载远程内容
+          curl -s "https://raw.githubusercontent.com/lg-yyds/tt/refs/heads/main/JN/EXT/JS/YTTVS.txt" -o "$TEMP_FILE"
+          
+          # 读取并修改文件内容
+          awk -v temp_file="$TEMP_FILE" 'BEGIN {RS="\n"; ORS="\n"; inserted=0} \
+               /📺央视频道,#genre#/ && !inserted {while ((getline line < temp_file) > 0) print line; inserted=1} \
+               {print $0}' "$INPUT_FILE" > "$OUTPUT_FILE"
+          
+          # 确保更改被保存
+          cat "$OUTPUT_FILE"
+      
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add output/user_tv.txt
+          git commit -m "Update user_tv.txt with external content and parse/UA info"
+          git push
