@@ -1,4 +1,4 @@
-name: Update user_result.txt
+name: Update user_tv
 
 on:
   schedule:
