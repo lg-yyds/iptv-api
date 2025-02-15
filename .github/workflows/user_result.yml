@@ -2,7 +2,8 @@ name: Update user_result
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # 每天午夜 UTC 运行
+        - cron: '20 03 * * *'
+        - cron: '20 14 * * *'
   workflow_dispatch:  # 允许手动运行
 
 jobs:
@@ -30,7 +31,7 @@ jobs:
           # 确保更改被保存
           cat "$OUTPUT_FILE"
       
-      - name: Commit and push changes
+      - name: Commit 和 push changes
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
