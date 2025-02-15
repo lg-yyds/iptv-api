@@ -4,3 +4,4 @@
 纬来体育,https://api.kds.tw/wlty
 TVBS新闻台,https://api.kds.tw/tvbsxw
 凤凰资讯,https://api.kds.tw/fhzx
+翡翠台,https://api.kds.tw/jade
