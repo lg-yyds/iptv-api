@@ -6,6 +6,7 @@ https://www.freetv.top/migu.m3u
 https://raw.githubusercontent.com/lg-yyds/m3u8-m3u/refs/heads/main/output/index.txt
 https://raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u
 https://raw.githubusercontent.com/lg-yyds/gdtvapi/refs/heads/master/TXT/diytv.txt
+https://raw.githubusercontent.com/lg-yyds/tt/refs/heads/main/JN/EXT/JS/YTTVS.txt
 https://raw.githubusercontent.com/dextermo01/HH004015/45fe84621104dca2fbe687665e609973de1b8bb3/HK.m3u
 https://raw.githubusercontent.com/dextermo01/HH004015/45fe84621104dca2fbe687665e609973de1b8bb3/Archive.m3u
 https://raw.githubusercontent.com/dextermo01/HH004015/45fe84621104dca2fbe687665e609973de1b8bb3/HK-zh.m3u
