@@ -3,3 +3,4 @@
 博斯运动1,https://api.kds.tw/bsyd1
 纬来体育,https://api.kds.tw/wlty
 TVBS新闻台,https://api.kds.tw/tvbsxw
+凤凰资讯,https://api.kds.tw/fhzx
