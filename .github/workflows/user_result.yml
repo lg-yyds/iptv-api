@@ -1,0 +1,37 @@
+name: Update user_result.txt
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # 每天午夜 UTC 运行
+  workflow_dispatch:  # 允许手动运行
+
+jobs:
+  update-file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Modify user_result.txt
+        run: |
+          # 指定文件路径
+          INPUT_FILE="output/user_result.txt"
+          OUTPUT_FILE="output/user_tv.txt"
+          
+          # 确保 output 目录存在
+          mkdir -p output
+          
+          # 读取并修改文件内容
+          awk '{print $0 "\nparse=1\nua=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"}' "$INPUT_FILE" > "$OUTPUT_FILE"
+          
+          # 确保更改被保存
+          cat "$OUTPUT_FILE"
+      
+      - name: Commit 和 push changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add output/user_tv.txt
+          git commit -m "Update user_tv.txt with parse and UA info"
+          git push
