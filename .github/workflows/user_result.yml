@@ -1,4 +1,4 @@
-name: Update user_result.txt
+name: Update user_result
 
 on:
   schedule:
@@ -23,15 +23,17 @@ jobs:
           mkdir -p output
           
           # 读取并修改文件内容
-          awk '{print $0 "\nparse=1\nua=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"}' "$INPUT_FILE" > "$OUTPUT_FILE"
+          awk 'BEGIN {RS="\n"; ORS="\n"} \
+               /四季線上,#genre#|热门频道,#genre#|新闻‧财经,#genre#|综合,#genre#|电影,#genre#|戏剧,#genre#|综艺,#genre#|卡通‧儿童,#genre#|动漫,#genre#/ {print $0 "\nparse=1\nua=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"; next} \
+               {print $0}' "$INPUT_FILE" > "$OUTPUT_FILE"
           
           # 确保更改被保存
           cat "$OUTPUT_FILE"
       
-      - name: Commit 和 push changes
+      - name: Commit and push changes
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add output/user_tv.txt
-          git commit -m "Update user_tv.txt with parse and UA info"
+          git commit -m "Update user_tv.txt with parse and UA info for specific entries"
           git push
