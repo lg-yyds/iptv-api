@@ -2,7 +2,8 @@ name: Update user_tv
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # 每天午夜 UTC 运行
+        - cron: '20 03 * * *'
+        - cron: '20 14 * * *'
   workflow_dispatch:  # 允许手动运行
 
 jobs:
