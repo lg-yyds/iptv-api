@@ -778,7 +778,14 @@ ELTV生活英語台,http://4gtv.mumi.rip:9877/106/litv-longturn20/index.m3u8
 
 删除缓存,#genre#
 
-🇹🇼台灣新聞,#genre#
+📺测试频道,#genre#
+博斯高尔夫,https://api.kds.tw/bsgolf
+博斯网球,https://api.kds.tw/bosstennis
+博斯运动1,https://api.kds.tw/bsyd1
+纬来体育,https://api.kds.tw/wlty
+TVBS新闻台,https://api.kds.tw/tvbsxw
+
+🇹🇼台灣新聞-油管,#genre#
 鳳凰資訊,https://www.youtube.com/watch?v=HFib76ySpbU
 鳳凰資訊,https://www.youtube.com/watch?v=LNux6O0Fj6A
 中天新聞,https://www.youtube.com/watch?v=vr3XyVCR4T0
@@ -805,7 +812,7 @@ TVBS NEWS,https://www.youtube.com/watch?v=m_dhMSvUCIc
 鏡新聞,https://www.youtube.com/watch?v=5n0y6b0Q25o&ab_channel=%E9%8F%A1%E6%96%B0%E8%81%9E
 
 
-🌍国际新闻,#genre#
+🌍国际新闻-油管,#genre#
 ABC News,https://www.youtube.com/watch?v=u8gyCHfITHw
 ABC News(Australia),https://www.youtube.com/watch?v=vOTiJkg1voo
 NBC News NOW,https://www.youtube.com/watch?v=PoX4NUhhIJc
@@ -829,7 +836,7 @@ NBC NEW,https://www.youtube.com/watch?v=0IUbD_4ytuo
 KOMPASTV,https://www.youtube.com/watch?v=w7ZTt55F5YE
 
 
-🇯🇵🇰🇷日韩新聞,#genre#
+🇯🇵🇰🇷日韩新聞-油管,#genre#
 Arirang TV,https://www.youtube.com/watch?v=CJVBX7KI5nU
 MBC NEWS,https://www.youtube.com/watch?v=q-Wv4Pvt-5A
 KBS NEWS,https://www.youtube.com/watch?v=D2R15WicmAs
@@ -847,23 +854,9 @@ YonhapnewsTV,https://www.youtube.com/watch?v=6QZ_qc75ihU
 YTN,https://www.youtube.com/watch?v=FJfwehhzIhw
 
 
-🇰🇷K-POP,#genre#
+🇰🇷K-POP-油管,#genre#
 THE K-POP,https://www.youtube.com/watch?v=JVocS7Yftw8
 THE K-POP 2,https://www.youtube.com/watch?v=TgLONqXNXqE
-
-📢广播迷,#genre#
-凤凰卫视中文台,video://http://www.guangbomi.com/tv/hk/ifeng1.html
-凤凰卫视资讯台,video://http://www.guangbomi.com/tv/hk/fhzx.html
-重庆新闻频道,video://http://www.guangbomi.com/tv/cq/cqxw.html
-澳门澳亚卫视,video://http://www.guangbomi.com/tv/hk/imastv.html
-澳门莲花卫视,video://http://www.guangbomi.com/tv/hk/lotustv.html
-RTHK31,video://http://www.guangbomi.com/tv/hk/rhk31.html
-RTHK32,video://http://www.guangbomi.com/tv/hk/rhk32.html
-RTHK33,video://http://www.guangbomi.com/tv/hk/rthk33.html
-RTHK34,video://http://www.guangbomi.com/tv/hk/rthk34.html
-RTHK35,video://http://www.guangbomi.com/tv/hk/rthk35.html
-耀才财经台,video://http://www.guangbomi.com/tv/hk/bsgroup.html
-
 
 🇹🇼四季線上,#genre#
 parse=1 
