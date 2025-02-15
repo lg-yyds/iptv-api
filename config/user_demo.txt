@@ -115,6 +115,14 @@ Russia Today 俄罗斯
 SBS 韩国
 TBS News 日本
 WION 印度
+
+📺测试频道,#genre#
+博斯高尔夫
+博斯网球
+博斯运动1
+纬来体育
+TVBS新闻台
+
 📺央视频道,#genre#
 CCTV-1
 CCTV-2
