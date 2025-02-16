@@ -25,7 +25,7 @@ jobs:
           mkdir -p output
           
           # 下载远程内容
-          curl -s "https://raw.githubusercontent.com/lg-yyds/tt/refs/heads/main/JN/EXT/JS/YTTVS.txt" -o "$TEMP_FILE"
+          curl -s "https://raw.githubusercontent.com/lg-yyds/tt/refs/heads/main/JN/EXT/TXT/YTTVS.txt" -o "$TEMP_FILE"
           
           # 读取并修改文件内容
           awk -v temp_file="$TEMP_FILE" 'BEGIN {RS="\n"; ORS="\n"; inserted=0} \
