@@ -169,9 +169,8 @@ CETV5
 西藏卫视
 新疆卫视
 云南卫视
+
 🌊港·澳·台,#genre#
-parse=1 
-ua=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
 翡翠台
 明珠台
 凤凰中文
