@@ -1,7 +1,7 @@
 # 这是订阅源列表，每行一个订阅地址
 # This is a list of subscription sources, with one subscription address per line
 
-https://arm.130707.xyz/Sub?type=txt
+https://arm.130707.xyz/Sub?type=txt&token=1gjj@nmfxv568hv31cd@
 https://www.freetv.top/migu.m3u
 https://raw.githubusercontent.com/lg-yyds/m3u8-m3u/refs/heads/main/output/index.txt
 https://raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u
