@@ -40,5 +40,5 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add output/user_tv.txt
-          git commit -m "Update user_tv.txt with external content and parse/UA info"
+          git commit -m "Update user_tv"
           git push
