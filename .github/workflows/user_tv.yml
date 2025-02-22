@@ -35,10 +35,33 @@ jobs:
           # 确保更改被保存
           cat "$OUTPUT_FILE"
       
+      - name: Check if user_tv.txt exists
+        run: |
+          if [ ! -f "output/user_tv.txt" ]; then
+            echo "Error: output/user_tv.txt does not exist!"
+            exit 1
+          fi
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --exit-code; then
+            echo "No changes detected."
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected."
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
       - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add output/user_tv.txt
           git commit -m "Update user_tv"
           git push
+
+      - name: Clean up temporary files
+        run: |
+          rm -f temp_content.txt
