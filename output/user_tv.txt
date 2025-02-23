@@ -49,7 +49,6 @@ CCTV-2,http://23.158.24.115:51021/TVOD/5000000011000031101/bestzb/index.m3u8
 CCTV-2,http://23.158.24.115:51021/TVOD/1000000005000265002/ystenlive/index.m3u8
 CCTV-2,http://23.158.24.115:51021/TVOD/1000000001000012442/ystenlive/index.m3u8
 CCTV-2,http://39.164.180.36:19901/tsfile/live/0002_1.m3u8?key=txiptv&playlive=0&authid=0
-CCTV-2,http://183.66.15.146:60901/tsfile/live/0002_1.m3u8
 CCTV-2,http://183.66.15.146:60901/tsfile/live/0002_1.m3u8?key=txiptv
 CCTV-2,http://goo.bkpcp.top/mg/cctv2
 CCTV-3,https://arm.130707.xyz/6000000001000022313/wasusyt/index.m3u8
@@ -534,15 +533,6 @@ Russia Today 俄罗斯,https://rt-glb.rttv.com/live/rtnews/playlist_2500Kb.m3u8
 SBS 韩国,http://61.82.49.4:1935/live/_definst_/tv.stream/chunklist_w432889607.m3u8
 TBS News 日本,http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=cs11
 WION 印度,https://d7x8z4yuq42qn.cloudfront.net/index_7.m3u8
-
-📺测试频道,#genre#
-parse=1 
-ua=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-博斯高尔夫,https://api.kds.tw/bsgolf
-博斯网球,https://api.kds.tw/bosstennis
-博斯运动1,https://api.kds.tw/bsyd1
-纬来体育,https://api.kds.tw/wlty
-
 
 🇹🇼台灣新聞-油管,#genre#
 鳳凰資訊,https://www.youtube.com/watch?v=HFib76ySpbU
