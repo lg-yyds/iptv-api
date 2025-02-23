@@ -1,9 +1,9 @@
 name: Update user_tv
 
 on:
-  schedule:
-    - cron: '30 03 * * *'
-    - cron: '30 14 * * *'
+  #schedule:
+   # - cron: '30 03 * * *'
+   # - cron: '30 14 * * *'
   workflow_dispatch:  # 允许手动运行
   push:
     paths:
