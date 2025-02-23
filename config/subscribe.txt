@@ -4,7 +4,6 @@
 https://raw.githubusercontent.com/lg-yyds/gdtvapi/refs/heads/master/TXT/diy.txt
 http://23.158.24.115:3412/?token=e4c5979e16&live=txt
 https://raw.githubusercontent.com/lg-yyds/gdtvapi/refs/heads/master/TXT/Smartv.m3u
-https://www.freetv.top/migu.m3u
 https://raw.githubusercontent.com/lg-yyds/m3u8-m3u/refs/heads/main/output/index.txt
 https://raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u
 https://raw.githubusercontent.com/lg-yyds/tt/refs/heads/main/JN/EXT/TXT/YTTVS.txt
