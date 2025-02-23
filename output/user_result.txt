@@ -49,7 +49,6 @@ CCTV-2,http://23.158.24.115:51021/TVOD/5000000011000031101/bestzb/index.m3u8
 CCTV-2,http://23.158.24.115:51021/TVOD/1000000005000265002/ystenlive/index.m3u8
 CCTV-2,http://23.158.24.115:51021/TVOD/1000000001000012442/ystenlive/index.m3u8
 CCTV-2,http://39.164.180.36:19901/tsfile/live/0002_1.m3u8?key=txiptv&playlive=0&authid=0
-CCTV-2,http://183.66.15.146:60901/tsfile/live/0002_1.m3u8
 CCTV-2,http://183.66.15.146:60901/tsfile/live/0002_1.m3u8?key=txiptv
 CCTV-2,http://goo.bkpcp.top/mg/cctv2
 CCTV-3,https://arm.130707.xyz/6000000001000022313/wasusyt/index.m3u8
