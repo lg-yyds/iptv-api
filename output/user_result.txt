@@ -29,7 +29,6 @@ CCTV-1,https://arm.130707.xyz/5000000004000002226/bestzb/index.m3u8
 CCTV-1,https://arm.130707.xyz/1000000005000265001/ystenlive/index.m3u8
 CCTV-1,https://arm.130707.xyz/5000000010000030810/bestzb/index.m3u8
 CCTV-1,https://arm.130707.xyz/1000000001000021973/ystenlive/index.m3u8
-CCTV-1,http://php.jdshipin.com/TVOD/iptv.php?id=rthk33
 CCTV-1,http://23.158.24.115:51021/TVOD/6000000001000029752/wasusyt/index.m3u8
 CCTV-1,http://23.158.24.115:51021/TVOD/1000000001000018602/ystenlive/index.m3u8
 CCTV-1,http://23.158.24.115:51021/TVOD/5000000004000002226/bestzb/index.m3u8
