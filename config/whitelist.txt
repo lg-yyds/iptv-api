@@ -4,7 +4,6 @@
 # Filling in the channel name will directly retain the record to the final result, such as: CCTV-1,url, only fill in the interface address will be effective for all channels, multiple records newline input.
 https://arm.130707.xyz
 https://raw.githubusercontent.com/lg-yyds/gdtvapi/refs/heads/master/TXT/diy.txt
-https://www.freetv.top/migu.m3u
 http://php.jdshipin.com/TVOD/
 http://4gtv.mumi.rip
 http://tv.lihonest.xyz:3000/AKTV/live/aktv3/
