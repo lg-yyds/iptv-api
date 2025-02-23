@@ -1,0 +1,124 @@
+name: 'Update schedule & user_tv'
+
+on:
+  schedule:
+    - cron: '0 03 * * *'
+    - cron: '0 14 * * *'
+  workflow_dispatch:
+    branches:
+      - master
+      - dev
+      - gd
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Set branch name
+        id: vars
+        run: echo "BRANCH_NAME=${{ github.repository_owner == 'Guovin' && 'gd' || 'master' }}" >> $GITHUB_ENV
+      
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ env.BRANCH_NAME }}
+      
+      - name: Run with setup-python 3.13
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+          update-environment: true
+          cache: 'pipenv'
+      
+      - name: Check open_driver config
+        id: check_driver
+        run: |
+          echo "OPEN_DRIVER=$(python -c '
+          try:
+            from utils.config import config
+            open_driver = config.open_driver
+          except:
+            open_driver = False
+          print(open_driver)')" >> $GITHUB_ENV
+      
+      - name: Set up Chrome
+        if: env.OPEN_DRIVER == 'True'
+        uses: browser-actions/setup-chrome@latest
+        with:
+          chrome-version: stable
+      
+      - name: Download chrome driver
+        if: env.OPEN_DRIVER == 'True'
+        uses: nanasess/setup-chromedriver@master
+      
+      - name: Install FFmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      
+      - name: Install pipenv
+        run: pip3 install --user pipenv
+      
+      - name: Install dependencies
+        run: pipenv --python 3.13 && pipenv install --deploy
+      
+      - name: Install selenium
+        if: env.OPEN_DRIVER == 'True'
+        run: pipenv install selenium
+      
+      - name: Update
+        run: pipenv run dev
+      
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git diff
+          final_file="output/result.txt"
+          final_m3u_file="output/result.m3u"
+          
+          for file in "$final_file" "$final_m3u_file" "output/cache.pkl" "output/sort.log" "updates/fofa/fofa_hotel_region_result.pkl" "updates/fofa/fofa_multicast_region_result.pkl"; do
+            if [[ -f "$file" ]]; then
+              git add -f "$file"
+            fi
+          done
+          
+          if ! git diff --staged --quiet; then
+            git commit -m "Github Action Auto Updated"
+            git push --force
+          fi
+      
+      - name: Modify user_result.txt
+        run: |
+          INPUT_FILE="output/user_result.txt"
+          OUTPUT_FILE="output/user_tv.txt"
+          TEMP_FILE="temp_content.txt"
+          mkdir -p output
+          curl -s "https://raw.githubusercontent.com/lg-yyds/tt/refs/heads/main/JN/EXT/TXT/YTTVS.txt" -o "$TEMP_FILE"
+          awk -v temp_file="$TEMP_FILE" 'BEGIN {RS="\n"; ORS="\n"; inserted=0} 
+               /📺央视频道,#genre#/ && !inserted {while ((getline line < temp_file) > 0) print line; inserted=1} 
+               {print $0}' "$INPUT_FILE" > "$OUTPUT_FILE"
+          cat "$OUTPUT_FILE"
+      
+      - name: Check if user_tv.txt exists
+        run: |
+          if [ ! -f "output/user_tv.txt" ]; then
+            echo "Error: output/user_tv.txt does not exist!"
+            exit 1
+          fi
+      
+      - name: Commit and push user_tv.txt if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git diff
+          
+          if [[ -f "output/user_tv.txt" ]]; then
+            git add -f "output/user_tv.txt"
+          fi
+          
+          if ! git diff --staged --quiet; then
+            git commit -m "Update user_tv.txt"
+            git push --force
+          fi
+      
+      - name: Clean up temporary files
+        run: rm -f temp_content.txt
