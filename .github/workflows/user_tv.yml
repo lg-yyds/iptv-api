@@ -13,48 +13,56 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # 获取完整提交历史以检测文件变化
+
+      - name: Check for changes in user_result.txt
+        id: check_user_result
+        run: |
+          git fetch origin main
+          # 检查远程分支与本地文件的差异
+          if git diff --exit-code HEAD origin/main -- output/user_result.txt; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
 
       - name: Modify user_result.txt
+        if: steps.check_user_result.outputs.changed == 'true'
         run: |
-          # 指定文件路径
           INPUT_FILE="output/user_result.txt"
           OUTPUT_FILE="output/user_tv.txt"
           TEMP_FILE="temp_content.txt"
           
-          # 确保 output 目录存在
           mkdir -p output
-          
-          # 下载远程内容
           curl -s "https://raw.githubusercontent.com/lg-yyds/tt/refs/heads/main/JN/EXT/TXT/YTTVS.txt" -o "$TEMP_FILE"
           
-          # 读取并修改文件内容
           awk -v temp_file="$TEMP_FILE" 'BEGIN {RS="\n"; ORS="\n"; inserted=0} \
                /📺央视频道,#genre#/ && !inserted {while ((getline line < temp_file) > 0) print line; inserted=1} \
                {print $0}' "$INPUT_FILE" > "$OUTPUT_FILE"
           
-          # 确保更改被保存
           cat "$OUTPUT_FILE"
-      
+
       - name: Check if user_tv.txt exists
+        if: steps.check_user_result.outputs.changed == 'true'
         run: |
           if [ ! -f "output/user_tv.txt" ]; then
             echo "Error: output/user_tv.txt does not exist!"
             exit 1
           fi
 
-      - name: Check for changes
-        id: check_changes
+      - name: Check for output changes
+        id: check_output_changes
+        if: steps.check_user_result.outputs.changed == 'true'
         run: |
-          if git diff --exit-code; then
-            echo "No changes detected."
+          if git diff --exit-code output/user_tv.txt; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
           else
-            echo "Changes detected."
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Commit and push changes
-        if: steps.check_changes.outputs.has_changes == 'true'
+        if: steps.check_user_result.outputs.changed == 'true' && steps.check_output_changes.outputs.has_changes == 'true'
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
