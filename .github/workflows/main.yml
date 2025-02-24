@@ -9,6 +9,7 @@ on:
       - master
       - dev
       - gd
+
 jobs:
   push:
     runs-on: ${{ matrix.operating-system }}
@@ -20,15 +21,18 @@ jobs:
       - name: Set branch name
         id: vars
         run: echo "BRANCH_NAME=${{ github.repository_owner == 'Guovin' && 'gd' || 'master' }}" >> $GITHUB_ENV
+
       - uses: actions/checkout@v3
         with:
           ref: ${{ env.BRANCH_NAME }}
+
       - name: Run with setup-python 3.13
         uses: actions/setup-python@v4
         with:
           python-version: '3.13'
           update-environment: true
           cache: 'pipenv'
+
       - name: Check open_driver config
         id: check_driver
         run: |
@@ -39,25 +43,33 @@ jobs:
           except:
             open_driver = False
           print(open_driver)')" >> $GITHUB_ENV
+
       - name: Set up Chrome
         if: env.OPEN_DRIVER == 'True'
         uses: browser-actions/setup-chrome@latest
         with:
           chrome-version: stable
+
       - name: Download chrome driver
         if: env.OPEN_DRIVER == 'True'
         uses: nanasess/setup-chromedriver@master
+
       - name: Install FFmpeg
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
       - name: Install pipenv
         run: pip3 install --user pipenv
+
       - name: Install dependecies
         run: pipenv --python 3.13 && pipenv install --deploy
+
       - name: Install selenium
         if: env.OPEN_DRIVER == 'True'
         run: pipenv install selenium
+
       - name: Update
         run: pipenv run dev
+
       - name: Commit and push if changed
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
@@ -100,4 +112,12 @@ jobs:
           if ! git diff --staged --quiet; then
             git commit -m "Github Action Auto Updated"
             git push --force
-          fi
+
+      # 在此步骤后添加触发另一个工作流的步骤
+      - name: Trigger user_tv workflow
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -d '{"ref": "main"}' \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/user_tv.yml/dispatches"
