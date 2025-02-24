@@ -2,7 +2,7 @@
 # This is a list of subscription sources, with one subscription address per line
 
 https://raw.githubusercontent.com/lg-yyds/gdtvapi/refs/heads/master/TXT/diy.txt
-http://23.158.24.115:3412/?token=e4c5979e16&live=txt
+https://tv4g.130707.xyz/Sub?type=m3u&sd=1080&proxy=true&token=9527@@@
 https://raw.githubusercontent.com/lg-yyds/gdtvapi/refs/heads/master/TXT/Smartv.m3u
 https://raw.githubusercontent.com/lg-yyds/m3u8-m3u/refs/heads/main/output/index.txt
 https://raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u
