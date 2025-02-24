@@ -5,10 +5,6 @@ on:
     - cron: '0 03 * * *'
     - cron: '0 14 * * *'
   workflow_dispatch:
-    branches:
-      - master
-      - dev
-      - gd
 
 jobs:
   push:
