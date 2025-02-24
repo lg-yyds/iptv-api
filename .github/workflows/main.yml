@@ -112,6 +112,7 @@ jobs:
           if ! git diff --staged --quiet; then
             git commit -m "Github Action Auto Updated"
             git push --force
+            
 
       # 在此步骤后添加触发另一个工作流的步骤
       - name: Trigger user_tv workflow
@@ -121,3 +122,5 @@ jobs:
             -H "Accept: application/vnd.github.v3+json" \
             -d '{"ref": "main"}' \
             "https://api.github.com/repos/${{ github.repository }}/actions/workflows/user_tv.yml/dispatches"
+
+            
