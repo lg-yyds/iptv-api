@@ -7,7 +7,7 @@ on:
   workflow_dispatch:  # 允许手动运行
   push:
     paths:
-      - 'output/user_result.txt'  # 只有在 output/user_result.txt 文件变化时触发
+      - 'output/user_result.txt'  # 当 output/user_result.txt 文件发生变化时触发
 
 jobs:
   update-file:
@@ -17,29 +17,25 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Store initial timestamp of user_result.txt
-        id: timestamp
-        run: |
-          # 获取 user_result.txt 文件的修改时间戳
-          FILE_TIMESTAMP=$(stat -c %Y output/user_result.txt)
-          echo "FILE_TIMESTAMP=$FILE_TIMESTAMP" >> $GITHUB_ENV
-
       - name: Modify user_result.txt
         run: |
+          # 指定文件路径
           INPUT_FILE="output/user_result.txt"
           OUTPUT_FILE="output/user_tv.txt"
           TEMP_FILE="temp_content.txt"
           
+          # 确保 output 目录存在
           mkdir -p output
           
           # 下载远程内容
           curl -s "https://raw.githubusercontent.com/lg-yyds/tt/refs/heads/main/JN/EXT/TXT/YTTVS.txt" -o "$TEMP_FILE"
           
-          # 修改文件内容
+          # 读取并修改文件内容
           awk -v temp_file="$TEMP_FILE" 'BEGIN {RS="\n"; ORS="\n"; inserted=0} \
                /📺央视频道,#genre#/ && !inserted {while ((getline line < temp_file) > 0) print line; inserted=1} \
                {print $0}' "$INPUT_FILE" > "$OUTPUT_FILE"
           
+          # 确保更改被保存
           cat "$OUTPUT_FILE"
       
       - name: Check if user_tv.txt exists
@@ -49,29 +45,24 @@ jobs:
             exit 1
           fi
 
-      - name: Check if file timestamp has changed
-        id: check_timestamp
+      - name: Check for changes
+        id: check_changes
         run: |
-          # 获取 user_result.txt 的最新时间戳
-          NEW_TIMESTAMP=$(stat -c %Y output/user_result.txt)
-          echo "NEW_TIMESTAMP=$NEW_TIMESTAMP" >> $GITHUB_ENV
-          
-          # 如果时间戳发生变化，则进行进一步操作
-          if [ "$FILE_TIMESTAMP" != "$NEW_TIMESTAMP" ]; then
-            echo "File timestamp has changed."
-            echo "has_changes=true" >> $GITHUB_OUTPUT
-          else
-            echo "No timestamp change detected."
+          if git diff --exit-code; then
+            echo "No changes detected."
             echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected."
+            echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Commit and push changes
-        if: steps.check_timestamp.outputs.has_changes == 'true'
+        if: steps.check_changes.outputs.has_changes == 'true'
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add output/user_tv.txt
-          git commit -m "Update user_tv based on timestamp change"
+          git commit -m "Update user_tv"
           git push
 
       - name: Clean up temporary files
